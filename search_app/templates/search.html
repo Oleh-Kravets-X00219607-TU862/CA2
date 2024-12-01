@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block metadescription %}
+    Explore our wide range of products with advanced search functionality to find exactly what you need.
+{% endblock %}
+
+{% block title %}
+    Advanced Search - Movie Shop
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <h2 class="text-center">Advanced Search</h2>
+    <form method="GET" action="{% url 'search_app:searchResult' %}" class="my-4">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label for="query" class="form-label">Search Term</label>
+                <input type="text" id="query" name="q" class="form-control" placeholder="Search products" value="{{ query }}">
+            </div>
+            <div class="col-md-4">
+                <label for="category" class="form-label">Category</label>
+                <select id="category" name="category" class="form-select">
+                    <option value="">All Categories</option>
+                    {% for cat in categories %}
+                        <option value="{{ cat.id }}" {% if request.GET.category == cat.id|stringformat:"s" %}selected{% endif %}>
+                            {{ cat.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="min_price" class="form-label">Min Price (€)</label>
+                <input type="number" id="min_price" name="min_price" class="form-control" placeholder="0" value="{{ request.GET.min_price }}">
+            </div>
+            <div class="col-md-2">
+                <label for="max_price" class="form-label">Max Price (€)</label>
+                <input type="number" id="max_price" name="max_price" class="form-control" placeholder="1000" value="{{ request.GET.max_price }}">
+            </div>
+            <div class="col-md-4">
+                <label for="available" class="form-label d-block">Availability</label>
+                <div class="form-check">
+                    <input type="checkbox" id="available" name="available" value="true" class="form-check-input" 
+                           {% if request.GET.available == 'true' %}checked{% endif %}>
+                    <label for="available" class="form-check-label">In Stock Only</label>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </div>
+        </div>
+    </form>
+    
+    <div class="my-4">
+        <p class="text-center">You searched for: <strong>"{{ query }}"</strong></p>
+    </div>
+
+    <div class="row g-4">
+        {% for product in product_list %}
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <a href="{{ product.get_absolute_url }}">
+                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">Price: €{{ product.price }}</p>
+                        <p class="card-text">Category: {{ product.category.name }}</p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <p class="text-center text-muted">No results found. Try adjusting your search criteria.</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

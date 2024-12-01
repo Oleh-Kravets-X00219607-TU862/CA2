@@ -1,0 +1,82 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Logo moved to the left -->
+    <a class="navbar-brand" href="{% url 'shop:all_products' %}">
+      <img src="{% static 'images/logo.png' %}" alt="Movie Store" style="height: 40px;">
+    </a>
+    <!-- Navbar toggle for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left-aligned items -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Search bar -->
+        <form class="d-flex" action="{% url 'search_app:searchResult' %}" method="get">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        <!-- Dropdown for Shop -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Shop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'shop:all_products' %}">All Products</a></li>
+            {% for cat in links %}
+              <li><a class="dropdown-item" href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <!-- Cart -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cart</a>
+        </li>
+        
+        <!-- Cart count if items exist -->
+        {% if item_count > 0 %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cart:cart_detail' %}">
+            <i class="fas fa-shopping-cart">({{item_count}})</i>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+
+      <!-- Right-aligned items (user greeting) -->
+      <ul class="navbar-nav ms-auto">
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Welcome, {{ user.username }} <i class="fas fa-user-circle"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <!-- Sign out button -->
+            <form method="post" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button type="submit" class="dropdown-item">
+                Sign Out <i class="fas fa-sign-out-alt"></i>
+              </button>
+            </form>
+            <li><a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a></li>
+            <li><a class="dropdown-item" href="{% url 'order:order_history' %}">Order History</a></li>
+          </ul>
+        </li>
+        {% else %}
+        <!-- Sign up and Sign in links for unauthenticated users -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up <i class="fas fa-user-plus"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Sign In <i class="fas fa-sign-in"></i></a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

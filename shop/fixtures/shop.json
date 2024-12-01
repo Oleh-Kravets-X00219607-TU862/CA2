@@ -1,0 +1,437 @@
+[
+    {
+        "model": "shop.category",
+        "pk": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+        "fields": {
+            "name": "Sci-Fi",
+            "description": "Futuristic, imaginative, technological, visionary, speculative.",
+            "image": "category/sci_fi_banner.jpg"
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb55",
+        "fields": {
+            "name": "Action",
+            "description": "Intense, thrilling, explosive, adventurous, dynamic.",
+            "image": "category/action_banner.jpg"
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb56",
+        "fields": {
+            "name": "Comedy",
+            "description": "Humorous, entertaining, witty, light-hearted.",
+            "image": "category/comedy_banner.jpg"
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb57",
+        "fields": {
+            "name": "Animation",
+            "description": "Creative, colorful, family-friendly, imaginative.",
+            "image": "category/animation_banner.jpg"
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+        "fields": {
+            "name": "Horror",
+            "description": "Frightening, suspenseful, chilling, supernatural.",
+            "image": "category/horror_banner.jpg"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "04bb7e5a-abd0-4d61-8526-364ed1c69168",
+        "fields": {
+            "name": "The Shining",
+            "description": "A family heads to an isolated hotel for the winter, where a sinister presence influences the father into violence. At the same time, his psychic son sees horrifying forebodings from both the past and the future.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "15.00",
+            "image": "product/the_shining.jpg",
+            "stock": 86,
+            "available": true,
+            "created": "2024-11-30T17:09:47.487Z",
+            "updated": "2024-11-30T17:09:47.487Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "069f2559-d9b1-46c2-b913-6dde922209df",
+        "fields": {
+            "name": "The Thing",
+            "description": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "27.00",
+            "image": "product/the_thing.jpg",
+            "stock": 100,
+            "available": true,
+            "created": "2024-11-30T17:10:25.528Z",
+            "updated": "2024-11-30T17:10:25.528Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+        "fields": {
+            "name": "Mission: Impossible",
+            "description": "An American agent, under false suspicion of disloyalty, must discover and expose the real spy without the help of his organization.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb55",
+            "price": "20.00",
+            "image": "product/mission_impossible.jpg",
+            "stock": 29,
+            "available": true,
+            "created": "2022-11-09T14:28:17.802Z",
+            "updated": "2024-11-30T12:39:48.623Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "20956ac2-73cd-4231-9e81-0e3a3281afff",
+        "fields": {
+            "name": "Jurassic Park",
+            "description": "An industrialist invites some experts to visit his theme park of cloned dinosaurs. After a power failure, the creatures run loose, putting everyone's lives, including his grandchildren's, in danger.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "28.00",
+            "image": "product/jurassic_park.jpg",
+            "stock": 73,
+            "available": true,
+            "created": "2024-11-30T16:30:01.192Z",
+            "updated": "2024-11-30T16:30:01.192Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "262c652c-5718-4135-a805-9d3b9f92dc88",
+        "fields": {
+            "name": "Matrix",
+            "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "67.00",
+            "image": "product/matrix.jpg",
+            "stock": 34,
+            "available": true,
+            "created": "2022-11-09T14:36:51.639Z",
+            "updated": "2024-11-06T09:36:33.485Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "2a7c38e6-5372-488f-b0f6-e7fe2c379627",
+        "fields": {
+            "name": "The Silence of the Lambs",
+            "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "23.00",
+            "image": "product/the_silence_of_the_lambs.jpg",
+            "stock": 63,
+            "available": true,
+            "created": "2024-11-30T17:11:22.820Z",
+            "updated": "2024-11-30T17:11:22.820Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+        "fields": {
+            "name": "Predator",
+            "description": "A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb55",
+            "price": "50.00",
+            "image": "product/predator.jpg",
+            "stock": 50,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-06T09:36:08.880Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+        "fields": {
+            "name": "Alien",
+            "description": "After investigating a mysterious transmission of unknown origin, the crew of a commercial spacecraft encounters a deadly lifeform.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "45.00",
+            "image": "product/alien.jpg",
+            "stock": 80,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-06T09:36:48.918Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea25",
+        "fields": {
+            "name": "Kung Fu Panda",
+            "description": "To everyone's surprise, including his own, Po, an overweight, clumsy panda, is chosen as protector of the Valley of Peace. His suitability will soon be tested as the valley's arch-enemy is on his way.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb57",
+            "price": "15.00",
+            "image": "product/kung_fu_panda.jpg",
+            "stock": 20,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-06T09:36:48.918Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea26",
+        "fields": {
+            "name": "Toy Story",
+            "description": "A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy's bedroom.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb57",
+            "price": "25.00",
+            "image": "product/toy_story.jpg",
+            "stock": 12,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-30T14:54:44.910Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea27",
+        "fields": {
+            "name": "Man in Black 3",
+            "description": "Agent J travels in time to M.I.B.'s early days in 1969 to stop an alien from assassinating his friend Agent K and changing history.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb56",
+            "price": "30.00",
+            "image": "product/men_in_black_3.jpg",
+            "stock": 20,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-06T09:36:48.918Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea28",
+        "fields": {
+            "name": "The Dictator",
+            "description": "The heroic story of a dictator who risked his life to ensure that democracy would never come to the country he so lovingly oppressed.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb56",
+            "price": "7.00",
+            "image": "product/the_dictator.jpg",
+            "stock": 4,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-30T15:09:49.308Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea29",
+        "fields": {
+            "name": "It",
+            "description": "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "10.00",
+            "image": "product/it.jpg",
+            "stock": 10,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-06T09:36:48.918Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea30",
+        "fields": {
+            "name": "Us",
+            "description": "In order to get away from their busy lives, the Wilson family takes a vacation to Santa Cruz, California. At night, four strangers break into Adelaide's childhood home. The family is shocked to find out that the intruders look like them.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "10.00",
+            "image": "product/us.jpg",
+            "stock": 10,
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2024-11-06T09:36:48.918Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "45ce810e-114f-4691-bd7c-08feafea2b4d",
+        "fields": {
+            "name": "Star Wars Episode 3",
+            "description": "With the Clone Wars coming to it's end, Obi-Wan Kenobi pursues a new threat, while Anakin Skywalker is lured by Chancellor Palpatine into a sinister plot for galactic domination.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "16.00",
+            "image": "product/star_wars_episode_3.jpg",
+            "stock": 55,
+            "available": true,
+            "created": "2024-11-30T16:29:11.903Z",
+            "updated": "2024-11-30T16:29:11.903Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "471ecd91-e751-4db2-90fc-dfcddf7c1e89",
+        "fields": {
+            "name": "Starship Troopers",
+            "description": "Humans, in a fascist militaristic future, wage war with giant alien bugs.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "24.00",
+            "image": "product/starship_troopers.jpg",
+            "stock": 160,
+            "available": true,
+            "created": "2024-11-30T16:30:12.462Z",
+            "updated": "2024-11-30T16:30:12.462Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "5e3f16cb-d667-4e35-9f18-0e6e4d3bd6cf",
+        "fields": {
+            "name": "Halloween",
+            "description": "Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois, to kill again.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "23.00",
+            "image": "product/halloween.jpg",
+            "stock": 70,
+            "available": true,
+            "created": "2024-11-30T17:10:37.716Z",
+            "updated": "2024-11-30T17:10:37.716Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "6c3fb660-020a-4477-9109-6a718012000a",
+        "fields": {
+            "name": "Aliens (1986)",
+            "description": "Decades after surviving the Nostromo incident, Ellen Ripley is sent out to re-establish contact with a terraforming colony but finds herself battling the Alien Queen and her offspring.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "24.00",
+            "image": "product/aliens_1986.jpg",
+            "stock": 145,
+            "available": true,
+            "created": "2024-11-30T16:27:57.443Z",
+            "updated": "2024-11-30T16:27:57.443Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "9e009de3-54ae-4552-a12b-63ff319b085a",
+        "fields": {
+            "name": "Terminator",
+            "description": "A cyborg assassin from the future attempts to find and kill a young woman who is destined to give birth to a warrior that will lead a resistance to save humankind from extinction.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "15.00",
+            "image": "product/terminator_1.jpg",
+            "stock": 100,
+            "available": true,
+            "created": "2024-11-30T16:27:36.018Z",
+            "updated": "2024-11-30T16:27:36.018Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "a3603873-eec7-4daf-a3a3-8cb9b105be5f",
+        "fields": {
+            "name": "Evil Dead 2",
+            "description": "Ash Williams, the lone survivor of an earlier onslaught of flesh-possessing spirits, holes up in a cabin with a group of strangers while the demons continue their attack.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "36.00",
+            "image": "product/evil_dead_2.jpg",
+            "stock": 230,
+            "available": true,
+            "created": "2024-11-30T17:12:36.484Z",
+            "updated": "2024-11-30T17:12:36.484Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "b83b1381-81b8-47b4-94e1-349864b3c7e0",
+        "fields": {
+            "name": "Interstellar",
+            "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "15.00",
+            "image": "product/interstellar.jpg",
+            "stock": 78,
+            "available": true,
+            "created": "2024-11-30T16:28:46.437Z",
+            "updated": "2024-11-30T16:28:46.437Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "e9165b36-66f0-467d-b7df-aff024a98034",
+        "fields": {
+            "name": "Edge of Tomorrow",
+            "description": "A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "17.00",
+            "image": "product/edge_of_tomorrow.jpg",
+            "stock": 156,
+            "available": true,
+            "created": "2024-11-30T16:28:10.598Z",
+            "updated": "2024-11-30T16:28:10.598Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "ea6473f7-72b0-4675-b4ab-bd94a67d03a1",
+        "fields": {
+            "name": "Jaws",
+            "description": "When a massive killer shark unleashes chaos on a beach community off Long Island, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "25.00",
+            "image": "product/jaws.jpg",
+            "stock": 132,
+            "available": true,
+            "created": "2024-11-30T17:10:56.662Z",
+            "updated": "2024-11-30T17:10:56.662Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "eb23c294-e7ae-4599-aae2-327906efd125",
+        "fields": {
+            "name": "A Nightmare on the Elm Street",
+            "description": "Teenager Nancy Thompson must uncover the dark truth concealed by her parents after she and her friends become targets of the spirit of a serial killer with a bladed glove in their dreams, in which if they die, it kills them in real life.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "24.00",
+            "image": "product/a_nightmare_on_elm_street.jpg",
+            "stock": 74,
+            "available": true,
+            "created": "2024-11-30T17:12:11.615Z",
+            "updated": "2024-11-30T17:12:11.615Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "fb1d46c3-bfc2-488d-949a-2e149a4432dc",
+        "fields": {
+            "name": "The Exorcist",
+            "description": "When a mysterious entity possesses a young girl, her mother seeks the help of two Catholic priests to save her life.",
+            "category": "3ee9d13e-3846-463f-86f7-d7e6ad6ecb58",
+            "price": "17.00",
+            "image": "product/the_exorcist.jpg",
+            "stock": 59,
+            "available": true,
+            "created": "2024-11-30T17:10:09.467Z",
+            "updated": "2024-11-30T17:10:09.467Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "fe81e5e5-9103-4bf1-809d-e98a5d9c9ad3",
+        "fields": {
+            "name": "Back To The Future",
+            "description": "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "price": "18.00",
+            "image": "product/back_to_the_future.jpg",
+            "stock": 134,
+            "available": true,
+            "created": "2024-11-30T16:28:27.379Z",
+            "updated": "2024-11-30T16:28:27.379Z"
+        }
+    }
+]
